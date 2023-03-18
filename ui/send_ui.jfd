@@ -1,0 +1,154 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "11.0.5" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundlePackage": "my.ui"
+	"i18n.bundleName": "test"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) {
+			"autoSize": false
+		} ) {
+			name: "my_send_ui"
+			"title": new FormMessage( null, "my_send_ui.title" )
+			"visible": true
+			"name": "send_ui2"
+			"defaultCloseOperation": 3
+			"resizable": false
+			"$sizePolicy": 1
+			auxiliary() {
+				"JavaCodeGenerator.variableModifiers": 1
+			}
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosing", "my_send_uiWindowClosing", true ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "choose_file"
+				"text": new FormMessage( null, "choose_file.text" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 5
+				"y": 5
+				"width": 60
+				"height": 40
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "search"
+				"text": new FormMessage( null, "search.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 200
+				"y": 50
+				"width": 90
+				"height": 35
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "text_file_name"
+					"lineWrap": true
+					"editable": false
+					"wrapStyleWord": true
+					"text": "请选择文件"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 65
+				"y": 5
+				"width": 310
+				"height": 40
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "request_send"
+				"text": new FormMessage( null, "request_send.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "request_sendActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 200
+				"y": 85
+				"width": 90
+				"height": 35
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "send"
+				"text": new FormMessage( null, "send.text" )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "sendActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 290
+				"y": 85
+				"height": 35
+				"width": 90
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "thread_num"
+				"text": new FormMessage( null, "thread_num.text" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 290
+				"y": 50
+				"width": 50
+				"height": 35
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "status"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "file_size"
+					"text": new FormMessage( null, "file_size.text" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 0
+					"y": 5
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "already_send"
+					"text": new FormMessage( null, "already_send.text" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 0
+					"y": 45
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "file_name2"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 60
+					"y": 5
+					"height": 20
+					"width": 135
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "file_size2"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 60
+					"y": 45
+					"width": 135
+					"height": 20
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 5
+				"y": 50
+				"height": 70
+				"width": 195
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "thread_num2"
+				"text": new FormMessage( null, "thread_num2.text_2" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 340
+				"y": 50
+				"width": 40
+				"height": 35
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane2"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "notify"
+					"wrapStyleWord": true
+					"lineWrap": true
+					"editable": false
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"height": 115
+				"x": 380
+				"y": 5
+				"width": 150
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 25 )
+			"size": new java.awt.Dimension( 545, 170 )
+		} )
+	}
+}
